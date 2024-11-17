@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-gray-100 antialiased;
+  background-image: radial-gradient(circle at center, rgba(31, 31, 31, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-all;
+  }
+  
+  .btn-primary {
+    @apply bg-pink-600 text-white hover:bg-pink-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-900 border border-gray-800 hover:border-pink-500;
+  }
+
+  .neon-text {
+    @apply text-pink-400;
+    text-shadow: 0 0 5px theme('colors.pink.400'),
+                 0 0 10px theme('colors.pink.400'),
+                 0 0 15px theme('colors.pink.400');
+  }
+
+  .glass-panel {
+    @apply bg-black/60 backdrop-blur-sm border border-gray-800/50 hover:border-pink-500/30;
+  }
+}
